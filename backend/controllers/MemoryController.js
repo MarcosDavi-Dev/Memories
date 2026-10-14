@@ -75,6 +75,7 @@ const deleteMemory = async (req, res) => {
 
     res.json({ msg: "Memória excluída" });
   } catch (error) {
+    console.log(error);
     res.status(500).send("Ocorreu um erro!");
   }
 };

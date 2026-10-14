@@ -1,0 +1,195 @@
+# 📸 Memories
+
+<p align="center">
+  <a href="#pt-br">🇧🇷 Português</a> | <a href="#en-us">🇺🇸 English</a>
+</p>
+
+---
+
+<a id="pt-br"></a>
+
+## 🇧🇷 Português
+
+Projeto acadêmico de um álbum de memórias onde é possível criar, listar, comentar e excluir lembranças com foto. Desenvolvido com **React**, **Node.js** e **MongoDB**.
+
+### Funcionalidades
+
+- Criar memória com título, descrição e imagem
+- Listar todas as memórias na página inicial
+- Ver uma memória específica e adicionar comentários
+- Excluir memória (remove também a imagem do servidor)
+
+### Tecnologias
+
+**Frontend**
+
+- React (Vite)
+- React Router DOM
+- Axios
+- React Toastify
+
+**Backend**
+
+- Node.js
+- Express
+- MongoDB Atlas + Mongoose
+- Multer (upload de imagens)
+- CORS
+- Dotenv
+
+### Estrutura do projeto
+
+```
+Memories/
+├── backend/    # API REST (Node.js + Express)
+└── frontend/   # Interface (React + Vite)
+```
+
+### Como rodar
+
+**Pré-requisitos**
+
+- Node.js instalado
+- Conta no [MongoDB Atlas](https://www.mongodb.com/atlas) com um cluster criado
+
+**Backend**
+
+```bash
+cd backend
+npm install
+```
+
+Crie um arquivo `.env` na pasta `backend` com as suas credenciais do MongoDB Atlas:
+
+```
+DBUSER=seu_usuario
+DBPASS=sua_senha
+```
+
+Inicie o servidor:
+
+```bash
+npm run start
+```
+
+O backend roda em `http://localhost:3000`.
+
+**Frontend**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+O frontend roda em `http://localhost:5173` (porta padrão do Vite).
+
+### Rotas da API
+
+| Método | Rota                    | Descrição                     |
+| ------ | ----------------------- | ----------------------------- |
+| POST   | `/memories`             | Cria uma memória (com imagem) |
+| GET    | `/memories`             | Lista todas as memórias       |
+| GET    | `/memories/:id`         | Busca uma memória             |
+| PATCH  | `/memories/:id`         | Atualiza uma memória          |
+| PATCH  | `/memories/:id/comment` | Adiciona um comentário        |
+| DELETE | `/memories/:id`         | Exclui uma memória e a imagem |
+
+### Autor
+
+Feito por [Marcos Davi](https://github.com/MarcosDavi-Dev).
+
+---
+
+<a id="en-us"></a>
+
+## 🇺🇸 English
+
+An academic memory album project where you can create, list, comment on and delete memories with photos. Built with **React**, **Node.js** and **MongoDB**.
+
+### Features
+
+- Create a memory with title, description and image
+- List all memories on the home page
+- View a single memory and add comments
+- Delete a memory (also removes the image from the server)
+
+### Technologies
+
+**Frontend**
+
+- React (Vite)
+- React Router DOM
+- Axios
+- React Toastify
+
+**Backend**
+
+- Node.js
+- Express
+- MongoDB Atlas + Mongoose
+- Multer (image upload)
+- CORS
+- Dotenv
+
+### Project structure
+
+```
+Memories/
+├── backend/    # REST API (Node.js + Express)
+└── frontend/   # User interface (React + Vite)
+```
+
+### How to run
+
+**Prerequisites**
+
+- Node.js installed
+- A [MongoDB Atlas](https://www.mongodb.com/atlas) account with a cluster created
+
+**Backend**
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` folder with your MongoDB Atlas credentials:
+
+```
+DBUSER=your_username
+DBPASS=your_password
+```
+
+Start the server:
+
+```bash
+npm run start
+```
+
+The backend runs at `http://localhost:3000`.
+
+**Frontend**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend runs at `http://localhost:5173` (Vite's default port).
+
+### API routes
+
+| Method | Route                   | Description                    |
+| ------ | ----------------------- | ------------------------------ |
+| POST   | `/memories`             | Creates a memory (with image)  |
+| GET    | `/memories`             | Lists all memories             |
+| GET    | `/memories/:id`         | Gets a single memory           |
+| PATCH  | `/memories/:id`         | Updates a memory               |
+| PATCH  | `/memories/:id/comment` | Adds a comment                 |
+| DELETE | `/memories/:id`         | Deletes a memory and its image |
+
+### Author
+
+Made by [Marcos Davi](https://github.com/MarcosDavi-Dev).
